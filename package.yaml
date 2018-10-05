@@ -1,0 +1,48 @@
+name:                push-maybe-list
+version:             0.1.0.0
+github:              "michaeljklein/push-maybe-list"
+license:             BSD3
+author:              "Michael J. Klein"
+maintainer:          "lambdamichael@gmail.com"
+copyright:           "(c) 2018 Michael J. Klein"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/michaeljklein/push-maybe-list#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  push-maybe-list-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - push-maybe-list
+
+tests:
+  push-maybe-list-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - push-maybe-list

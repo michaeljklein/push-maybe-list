@@ -1,0 +1,61 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: eb9e58d3ead1ad175d726f004943b64f25bb1f98f5b1a636e503a67fad86485e
+
+name:           push-maybe-list
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/michaeljklein/push-maybe-list#readme>
+homepage:       https://github.com/michaeljklein/push-maybe-list#readme
+bug-reports:    https://github.com/michaeljklein/push-maybe-list/issues
+author:         Michael J. Klein
+maintainer:     lambdamichael@gmail.com
+copyright:      (c) 2018 Michael J. Klein
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/michaeljklein/push-maybe-list
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_push_maybe_list
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable push-maybe-list-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_push_maybe_list
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , push-maybe-list
+  default-language: Haskell2010
+
+test-suite push-maybe-list-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_push_maybe_list
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , push-maybe-list
+  default-language: Haskell2010
