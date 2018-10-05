@@ -20,3 +20,8 @@ Run tests with
 stack test
 ```
 
+
+# Docs
+
+Haddock generated documentation may be found [here](https://michaeljklein.github.io/push-maybe-list/)
+
